@@ -1,0 +1,19 @@
+name: attempt
+version: 0.1.0
+
+authors:
+  - mosop
+
+crystal: 0.20.5
+
+license: MIT
+
+dependencies:
+  calling:
+    github: mosop/calling
+    version: ~> 0.1.0
+
+development_dependencies:
+  stdio:
+    github: mosop/stdio
+    version: ~> 0.1.3
