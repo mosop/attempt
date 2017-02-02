@@ -30,7 +30,7 @@ class AttemptInternalSpecs::Prewait
       end
 
       actual.attempts.should eq 1
-      {% if flag?(:retry_test) %}
+      {% if flag?(:attempt_test) %}
         Attempt.sleep(Calling::Any).should eq [
           {args: {seconds: PREWAIT}}
         ]
@@ -50,7 +50,7 @@ class AttemptInternalSpecs::Prewait
       end
 
       actual.attempts.should eq 5
-      {% if flag?(:retry_test) %}
+      {% if flag?(:attempt_test) %}
         Attempt.sleep(Calling::Any).should eq [
           {args: {seconds: PREWAIT}},
           {args: {seconds: WAIT}},

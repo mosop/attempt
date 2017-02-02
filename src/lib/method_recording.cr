@@ -1,5 +1,5 @@
 struct Attempt
-  {% if flag?(:retry_test) %}
+  {% if flag?(:attempt_test) %}
     extend Calling::Rec
   {% else %}
     extend Calling::NoRec

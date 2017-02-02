@@ -45,7 +45,7 @@ class AttemptInternalSpecs::Wait
       end
 
       actual.attempts.should eq 5
-      {% if flag?(:retry_test) %}
+      {% if flag?(:attempt_test) %}
         Attempt.sleep(Calling::Any).should eq [
           {args: {seconds: WAIT}},
           {args: {seconds: WAIT}},
